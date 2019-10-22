@@ -40,12 +40,11 @@ ENV IRIS_ROUTINE_BUFFERS=64
 ADD --chown=irisowner:irisuser ./${IRIS_PROJECT_FOLDER_NAME}/ $IRIS_APP_SOURCEDIR
 
 # Adding scripts to load base image source and child image source
+ADD ./imageBuildingUtils.sh $ISC_PACKAGE_INSTALLDIR/demo/imageBuildingUtils.sh
 ADD ./irisdemobaseinstaller.sh $ISC_PACKAGE_INSTALLDIR/demo/irisdemobaseinstaller.sh
 ADD ./irisdemoinstaller.sh $ISC_PACKAGE_INSTALLDIR/demo/irisdemoinstaller.sh
 
-# Running irisdemobaseinstaller will trigger irisdemoinstaller too. In this case, we do have
-# some basic source code from the base image that we want to load, so that is fine. Child images
-# will be able to just run irisdemoinstaller.sh to load and compile their own source code.
+# This must be called only on this base images. Child images must call irisdemoinstaller.sh instead.
 RUN $ISC_PACKAGE_INSTALLDIR/demo/irisdemobaseinstaller.sh
 
 HEALTHCHECK --interval=5s CMD /irisHealth.sh || exit 1
