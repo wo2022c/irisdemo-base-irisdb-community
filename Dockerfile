@@ -16,7 +16,7 @@ RUN sed -i "s/AlternateDirectory=.*/AlternateDirectory=\/usr\/irissys\/mgr\/jour
 USER irisowner
 
 # Name of the project folder ex.: irisdemodb-atelier-project
-ARG IRIS_PROJECT_FOLDER_NAME
+ARG IRIS_PROJECT_FOLDER_NAME=irisdemodb-atelier-project
 
 # Used to specify a folder on the container with the source code (csp pages, classes, etc.)
 # to load into the CSP application.
