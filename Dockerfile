@@ -1,6 +1,11 @@
-FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2019.4.0.379.0
+#FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2019.4.0.379.0
+FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2020.1.0.197.0
 
-LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
+LABEL maintainer="Amir Samary <amir.samary@intersystems.com>" 
+
+#
+# We can't use ISC_CPF_MERGE_FILE because we are not using Durable %SYS on our demos
+#
 
 # Configuring Alternate Journal Directory for IRIS for Health, setting correct permissions on
 # modified iris.cpf and newly created journal directory.

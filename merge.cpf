@@ -1,0 +1,9 @@
+[config]
+globals=0,0,128,0,0,0
+gmheap=51200
+routines=64
+locksiz=16777216
+bbsiz=262144
+
+[Journal]
+AlternateDirectory=/usr/irissys/mgr/journal2/
