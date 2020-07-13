@@ -4,7 +4,7 @@
 #
 
 GIT_REPO_NAME=irisdemo-base-irisdb-community
-TAG=latest
+TAG=version-$(cat ./VERSION)
 IMAGE_NAME=intersystemsdc/$GIT_REPO_NAME:$TAG
 
 docker run --rm -it --init  \
