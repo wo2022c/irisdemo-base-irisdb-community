@@ -1,3 +1,16 @@
+
 {
-    "objectscript.conn.active": false
+    "objectscript.conn":
+    {
+        "active": true,
+        "label": "irisdb",
+        "host": "localhost",
+        "port": 52773,
+        "username": "SuperUser",
+        "password": "sys",
+        "ns": "APP",
+        "https": false
+    },
+    "objectscript.conn.active": true,
+    "objectscript.export.folder": "irisdemodb-atelier-project",
 }
