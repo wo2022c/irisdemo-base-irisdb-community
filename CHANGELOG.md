@@ -1,3 +1,6 @@
+## 1.7.1 (October 16, 2020)
+  - Making sure an empty messages.log exists
+
 ## 1.7.0 (September 30, 2020)
 - Bumping to 2020.3.0.200.0
 
