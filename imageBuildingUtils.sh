@@ -115,6 +115,9 @@ remove_logs() {
 
     rm -f $ISC_PACKAGE_INSTALLDIR/mgr/messages.log
     exit_if_error "Could not remove messages.log"
+
+	# We need to leave an empty messages.log there so IRIS can find it and open it
+	touch $ISC_PACKAGE_INSTALLDIR/mgr/messages.log
 }
 
 remove_iris_ids() {
