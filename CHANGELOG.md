@@ -1,3 +1,6 @@
+## 1.8.0 (August 10, 2021)
+  - Bumping IRIS version to 2021.1.0.215.0
+
 ## 1.7.1 (October 16, 2020)
   - Making sure an empty messages.log exists
 
