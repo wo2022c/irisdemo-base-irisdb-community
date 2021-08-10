@@ -1,7 +1,8 @@
 #FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2019.4.0.379.0
 # FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2020.2.0.196.0
 # FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2020.2.0.211.0
-FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2020.3.0.200.0
+# FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2020.3.0.200.0
+FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2021.1.0.215.0
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>" 
 
