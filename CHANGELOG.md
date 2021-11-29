@@ -1,3 +1,6 @@
+## 1.8.1 (November 29, 2021)
+  - Bumping base image to 2021.1.0.215.3
+
 ## 1.8.0 (August 10, 2021)
   - Bumping IRIS version to 2021.1.0.215.0
 
