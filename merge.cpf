@@ -7,3 +7,7 @@ bbsiz=262144
 
 [Journal]
 AlternateDirectory=/usr/irissys/mgr/journal2/
+
+[Startup]
+SystemMode=LIVE
+PasswordHash=43109382d758c01728262a29e2ae0791ba6ebc44029edebfccef32e7591f8586461b8a44d60b21c395bf2c3b5e852fb7f3652b0a2446d24a619185dc0faa9ba8,9bea618fe60deb635ac62cb8c78bced0cf0b35ec13c953072e89e2809083cffa93a9b624f2ea384fe32036f2e193ab7a0423d61631cee01a18adb129bc33f3e9,10000,SHA512
