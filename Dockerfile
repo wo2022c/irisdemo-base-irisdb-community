@@ -26,15 +26,24 @@ ENV IRIS_APP_NAME="APP"
 ENV IRIS_GLOBAL_BUFFERS=128
 ENV IRIS_ROUTINE_BUFFERS=64
 
+# Changing to root so we can add the files and then use the chown command to 
+# change the permissions to irisowner/irisowner 
+USER root
+
 # Adding source code that will be loaded by the installer
 # The ADD command ignores the current USER and always add as root. 
 # That is why were are doing the chown
-ADD --chown=irisowner:irisuser ./${IRIS_PROJECT_FOLDER_NAME}/ $IRIS_APP_SOURCEDIR
+ADD ./${IRIS_PROJECT_FOLDER_NAME}/ $IRIS_APP_SOURCEDIR
+RUN chown -R irisowner:irisowner $IRIS_APP_SOURCEDIR
 
 # Adding scripts to load base image source and child image source
-ADD ./imageBuildingUtils.sh /demo/imageBuildingUtils.sh
-ADD ./irisdemobaseinstaller.sh /demo/irisdemobaseinstaller.sh
-ADD ./irisdemoinstaller.sh /demo/irisdemoinstaller.sh
+ADD --chown=irisowner/irisowner ./imageBuildingUtils.sh /demo/imageBuildingUtils.sh
+ADD --chown=irisowner/irisowner ./irisdemobaseinstaller.sh /demo/irisdemobaseinstaller.sh
+ADD --chown=irisowner/irisowner ./irisdemoinstaller.sh /demo/irisdemoinstaller.sh
+RUN chown -R irisowner:irisowner /demo
+
+# Now we change back to irisowner so that the RUN command will be run with this user
+USER irisowner 
 
 # This must be called only on this base images. Child images must call irisdemoinstaller.sh instead.
 RUN /demo/irisdemobaseinstaller.sh
