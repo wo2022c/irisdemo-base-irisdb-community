@@ -6,6 +6,8 @@
 FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2021.2.0.637.0
 FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2021.2.0.649.0
 FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2021.2.0.651.0
+FROM intersystemsdc/irisdemo-base-irisdb-community:iris-community.2022.1.0.209.0
+
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>" 
 
