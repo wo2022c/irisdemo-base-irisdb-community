@@ -1,3 +1,6 @@
+## 1.9.7 (January 22, 2025)
+  - Upgrading to IRIS 2024.3
+
 ## 1.9.7 (May 21, 2024)
   - Upgrading to IRIS 2024.1
 
