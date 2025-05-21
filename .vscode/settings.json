@@ -2,7 +2,7 @@
 {
     "objectscript.conn":
     {
-        "active": true,
+        "active": false,
         "label": "irisdb",
         "host": "localhost",
         "port": 52773,

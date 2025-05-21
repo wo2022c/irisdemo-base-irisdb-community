@@ -34,9 +34,9 @@ Class IRISConfig.Installer Extends IRISConfig.InstallerBase
 			-->
 			<CSPApplication Url="/csp/${CSPAppName}"      Directory="${CSPDIR}${CSPAppName}" AuthenticationMethods="#{##class(IRISConfig.Installer).AuthForCSP()}" Recurse="true" IsNamespaceDefault="true"  Grant="AppRole" CookiePath="/csp/${CSPAppName}" AutoCompile="false" CSPZENEnabled="true" InboundWebServicesEnabled="false" GroupById="${CSPAppName}" UseSessionCookie="1"/>
 			
-			<CSPApplication Url="/csp/${CSPAppName}/soap" Directory="${CSPDIR}${CSPAppName}" AuthenticationMethods="#{##class(IRISConfig.Installer).AuthForSOAP()}" Recurse="true" IsNamespaceDefault="false" Grant="AppRole" CookiePath="/csp/${CSPAppName}" AutoCompile="false" CSPZENEnabled="true" InboundWebServicesEnabled="true"  GroupById="${CSPAppName}" UseSessionCookie="1" PermittedClasses='1""IRISDemo.SOAP."".E'/>
+			<CSPApplication Url="/csp/${CSPAppName}/soap" Directory="${CSPDIR}${CSPAppName}" AuthenticationMethods="#{##class(IRISConfig.Installer).AuthForSOAP()}" Recurse="true" IsNamespaceDefault="false" Grant="AppRole" CookiePath="/csp/${CSPAppName}" AutoCompile="false" CSPZENEnabled="true" InboundWebServicesEnabled="true"  GroupById="${CSPAppName}" UseSessionCookie="1" PermittedClasses='1"IRISDemo.SOAP.".E'/>
 	        
-	        <CSPApplication Url="/csp/${CSPAppName}/rest" Directory="${CSPDIR}${CSPAppName}" AuthenticationMethods="#{##class(IRISConfig.Installer).AuthForREST()}" Recurse="true" IsNamespaceDefault="false" Grant="AppRole" CookiePath="/csp/${CSPAppName}" AutoCompile="false" CSPZENEnabled="true" InboundWebServicesEnabled="false" GroupById="${CSPAppName}" UseSessionCookie="1" PermittedClasses='1""IRISDemo.REST."".E' DispatchClass="IRISDemo.REST.Dispatcher"/>
+	        <CSPApplication Url="/csp/${CSPAppName}/rest" Directory="${CSPDIR}${CSPAppName}" AuthenticationMethods="#{##class(IRISConfig.Installer).AuthForREST()}" Recurse="true" IsNamespaceDefault="false" Grant="AppRole" CookiePath="/csp/${CSPAppName}" AutoCompile="false" CSPZENEnabled="true" InboundWebServicesEnabled="false" GroupById="${CSPAppName}" UseSessionCookie="1" PermittedClasses='1"IRISDemo.REST.".E' DispatchClass="IRISDemo.REST.Dispatcher"/>
 	        
 			<IfDef Var="SourceDir">
 	            <Log Text="SourceDir defined - offline install from ${SourceDir}" Level="0"/>
